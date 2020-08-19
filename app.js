@@ -17,6 +17,7 @@ socketServer.on("connection",function(socket){
         socket.broadcast.emit('onmm',point);
     })
 })
-httpserver.listen(3000,function(){
+let port = process.env.PORT||3000;
+httpserver.listen(port,function(){
     console.log("Server is listening to request at port 3000");
 })
